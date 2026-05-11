@@ -186,4 +186,13 @@ document.addEventListener('DOMContentLoaded', () => {
       partSearchForm.reset();
     });
   }
+
+  // --- 6. Mobile Menu Toggle ---
+  const menuToggle = document.querySelector('.menu-toggle');
+  const gnb = document.querySelector('.gnb');
+  if(menuToggle && gnb) {
+    menuToggle.addEventListener('click', () => {
+      gnb.classList.toggle('active');
+    });
+  }
 });

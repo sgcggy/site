@@ -119,3 +119,16 @@ main { flex: 1; }
     0% { opacity: 0; transform: translateY(-30px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .page-header { padding: 120px 0 80px; }
+    .page-header h1 { font-size: 32px; }
+    .subpage-section { padding: 60px 0 80px; }
+    .subpage-content { padding: 40px 20px; }
+    .subpage-content h2 { font-size: 28px; margin-bottom: 30px; }
+    .board-container { overflow-x: auto; width: 100%; border: 1px solid #ddd; }
+    .board-table { min-width: 600px; }
+    .form-row { flex-direction: column; gap: 10px; margin-bottom: 10px;}
+    .contact-form { padding: 40px 20px; }
+}

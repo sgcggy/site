@@ -204,11 +204,43 @@ button { cursor: pointer; font-family: inherit; border: none; background: transp
 /* Responsive */
 @media (max-width: 991px) {
   .top-bar { display: none; }
-  .gnb, .header-container { display: none; } 
-  .menu-toggle { display: block; }
+  .gnb {
+    position: absolute; top: 90px; left: -100%; width: 100%; height: calc(100vh - 90px);
+    background: #fff; flex-direction: column; align-items: stretch; transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow-y: auto; display: block; z-index: 998;
+    border-top: 1px solid var(--border-light);
+  }
+  .gnb.active { left: 0; }
+  .gnb > ul { flex-direction: column; display: block; }
+  .gnb > ul > li { display: block; padding: 0; border-bottom: 1px solid #f0f0f0; height: auto;}
+  .gnb > ul > li > a { display: flex; justify-content: space-between; padding: 20px 30px; font-size: 16px; color: #111; }
+  .gnb > ul > li > a::after { display: none; }
+  .menu-toggle { display: block; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--primary-color);}
+  
   .header-container { display: flex; }
+  .hero-title { font-size: 40px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: 1fr; }
   .footer-top { flex-direction: column; gap: 20px; text-align: center; }
   .mega-menu { display: none !important; }
+  .tabs { flex-wrap: wrap; gap: 10px; }
+  .tab-btn { font-size: 16px; padding: 10px; }
+  .product-info { width: 100%; padding: 30px 20px; }
+  .product-card { flex-direction: column; }
+  .product-card img { width: 100%; height: 250px; border-right: none; border-bottom: 1px solid #ececec; }
+  #part-search-form { flex-direction: column; }
+  #part-search-form input { border-radius: 8px; margin-bottom: 15px; }
+  #part-search-form button { border-radius: 8px; padding: 15px; }
+  .part-search-box { padding: 30px 20px; }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 32px; }
+  .hero-subtitle { font-size: 16px; margin-bottom: 30px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 28px; }
+  .stat-item { padding: 40px 20px; }
+  .contact-form { padding: 40px 20px; }
+  .support-section { padding: 80px 0; }
+  .products-section { padding: 80px 0; }
 }
