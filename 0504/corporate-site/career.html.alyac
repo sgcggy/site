@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인재채용 - SGC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt="SGC 로고" style="height: 50px;"></a></div>
+      <nav class="gnb">
+        <ul>
+          <li><a href="corp.html">기업정보</a></li>
+          <li><a href="sus.html">지속가능경영</a></li>
+          <li><a href="career.html">인재채용</a></li>
+          <li><a href="news.html">뉴스룸</a></li>
+          <li><a href="products.html">제품정보</a></li>
+          <li><a href="support.html">고객지원</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header" style="background-image: url('images/product1.png')">
+       <div class="overlay"></div>
+       <div class="container">
+         <h1>인재채용</h1>
+         <div class="breadcrumb">경로: <a href="index.html">홈</a> > <span>인재채용</span></div>
+       </div>
+    </div>
+    <section class="subpage-section">
+      <div class="container">
+        <div class="subpage-content">
+          <h2>미래를 함께할 혁신 인재를 찾습니다</h2>
+          <p>SGC 글로벌 채용 공고와 사내 복지 제도를 안내하는 인재 파빌리온입니다. 직무 소개 및 글로벌 엔지니어들의 이야기를 들어보세요.</p>
+          <p>본 페이지에 진입한 경로는 메인 화면 GNB의 '인재채용' 버튼을 클릭하여 이동한 것입니다.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

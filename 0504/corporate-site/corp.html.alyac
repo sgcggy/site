@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기업정보 - SGC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="SGC 로고" style="height: 50px; object-fit: contain;">
+        </a>
+      </div>
+      <nav class="gnb" aria-label="Main Navigation">
+        <ul role="menubar">
+          <li role="none"><a role="menuitem" href="corp.html">기업정보</a></li>
+          <li role="none"><a role="menuitem" href="sus.html">지속가능경영</a></li>
+          <li role="none"><a role="menuitem" href="career.html">인재채용</a></li>
+          <li role="none"><a role="menuitem" href="news.html">뉴스룸</a></li>
+          <li role="none"><a role="menuitem" href="products.html">제품정보</a></li>
+          <li role="none"><a role="menuitem" href="support.html">고객지원</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header" style="background-image: url('images/hero1.png')">
+       <div class="overlay"></div>
+       <div class="container">
+         <h1>기업정보</h1>
+         <div class="breadcrumb">경로: <a href="index.html">홈</a> > <span>기업정보</span></div>
+       </div>
+    </div>
+    <section class="subpage-section">
+      <div class="container">
+        <div class="subpage-content">
+          <h2>SGC의 비전과 철학</h2>
+          <p>세계적인 종합부품 제조회사 SGC의 역사를 소개하는 상세 페이지입니다. 끊임없는 혁신과 R&D 투자로 다가오는 디지털 르네상스를 이끌어갑니다.</p>
+          <p>본 페이지에 진입한 경로는 메인 화면 GNB의 '기업정보' 버튼을 클릭하여 이동한 것입니다.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div class="company-info">
+        <p><strong>(주)SGC 글로벌 스마트 아키텍처</strong></p>
+      </div>
+      <p class="copyright">© 2024 SGC Corporation. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

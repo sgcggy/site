@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=""ko"">
+<head>
+  <meta charset=""UTF-8"">
+  <title>사회공헌 - SGC</title>
+  <link href=""https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"" rel=""stylesheet"">
+  <link rel=""stylesheet"" href=""style.css"">
+  <link rel=""stylesheet"" href=""subpage.css"">
+</head>
+<body>
+  <header class=""header"">
+    <div class=""container header-container"">
+      <div class=""logo""><a href=""index.html""><img src=""images/logo.png"" alt=""SGC 로고"" style=""height: 50px; object-fit: contain;""></a></div>
+      <nav class=""gnb"">
+        <ul>
+          <li><a href=""intro.html"">기업정보</a></li>
+          <li><a href=""sus.html"">지속가능경영</a></li>
+          <li><a href=""career.html"">인재채용</a></li>
+          <li><a href=""news.html"">뉴스룸</a></li>
+          <li><a href=""products.html"">제품정보</a></li>
+          <li><a href=""support.html"">고객지원</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class=""page-header"" style=""background-image: url('images/hero2.png')"">
+       <div class=""overlay""></div>
+       <div class=""container"">
+         <h1>사회공헌</h1>
+         <div class=""breadcrumb"">경로: <a href=""index.html"">홈</a> > <span>지속가능경영 > People > 사회공헌</span></div>
+       </div>
+    </div>
+    <section class=""subpage-section"">
+      <div class=""container"">
+        <div class=""subpage-content"">
+          <h2>사회공헌 전용 상세 화면</h2>
+          <p>안녕하십니까, 이곳은 SGC <strong>사회공헌</strong> 페이지입니다.</p>
+          <p>지속가능경영(Sustainability) 대형 메가 메뉴(Mega Menu)의 세부 링크를 클릭하여 <strong>[ 지속가능경영 > People > 사회공헌 ]</strong> 경로로 정상 진입하셨습니다. <br>기업의 투명한 운영과 지속가능한 지구 환경을 위한 SGC의 철학과 기록을 이곳에서 확인하실 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
