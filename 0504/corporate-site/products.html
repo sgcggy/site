@@ -1,122 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>제품정보 - SGC</title>
+  <title>COBOT 로보틱스 라인업 - 통합 포털</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="subpage.css">
+  <style>
+    .hero-video-container { position: relative; height: 600px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; margin-top: -100px; margin-bottom: 60px; text-align: center; border-bottom: 2px solid var(--accent-neon); }
+    .hero-video-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('images/sgc_titan.png'); background-size: cover; background-position: center; animation: breathZoom 15s infinite alternate ease-in-out; opacity: 0.4; filter: blur(3px); }
+    .hero-video-text { position: relative; z-index: 2; color: #fff; }
+    .hero-video-text h1 { font-size: 56px; font-weight: 800; margin-bottom: 20px; text-shadow: 0 0 30px rgba(57,255,20,0.5); }
+    @keyframes breathZoom { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+
+    .route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 100px; }
+    .route-card { display:flex; flex-direction: column; background: rgba(0,11,26,0.8); border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; transition: 0.3s; text-decoration: none;}
+    .route-card:hover { transform: translateY(-10px); border-color: var(--accent-neon); box-shadow: 0 10px 40px rgba(57,255,20,0.2); }
+    .route-img { height: 250px; background: #fff; padding: 20px;}
+    .route-img img { width: 100%; height: 100%; object-fit: contain; }
+    .route-text { padding: 30px; }
+    .route-text h3 { color: #fff; font-size: 24px; margin-bottom: 15px; }
+    .route-text p { color: var(--text-base); font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
+    .route-text span { color: var(--accent-neon); font-weight: 700; font-size: 14px; }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-container">
-      <div class="logo"><a href="index.html"><img src="images/logo.png" alt="SGC 로고" style="height: 50px; object-fit: contain;"></a></div>
-      <nav class="gnb" aria-label="Main Navigation">
-        <ul role="menubar">
-          <li role="none" class="has-mega-menu">
-            <a role="menuitem" href="intro.html">기업정보</a>
-            <div class="mega-menu">
-              <div class="mega-content container">
-                <div class="mega-links">
-                  <div class="mega-col">
-                    <h4>기업 소개</h4>
-                    <ul>
-                      <li><a href="intro.html">SGC 소개</a></li>
-                      <li><a href="ceo.html">CEO 인사말</a></li>
-                      <li><a href="vision.html">미션 및 비전</a></li>
-                      <li><a href="history.html">연혁 및 수상실적</a></li>
-                    </ul>
-                  </div>
-                  <div class="mega-col">
-                    <h4>IR</h4>
-                    <ul>
-                      <li><a href="ir.html">실적발표</a></li>
-                      <li><a href="stock.html">주가정보</a></li>
-                    </ul>
-                  </div>
-                  <div class="mega-col">
-                    <h4>지배구조</h4>
-                    <ul>
-                      <li><a href="disclosure.html">공시/공고</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mega-banner">
-                   <div class="banner-inner" style="background-image: url('images/hero1.png');" onclick="location.href='intro.html'">
-                     <div class="banner-text">
-                       <strong>50</strong>
-                       <p>1974 - 2024 ANNIVERSARY</p>
-                       <span>온라인 홍보관 알아보기 &gt;</span>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li role="none" class="has-mega-menu">
-            <a role="menuitem" href="sus.html">지속가능경영</a>
-            <div class="mega-menu">
-              <div class="mega-content container">
-                <div class="mega-links" style="justify-content: space-between; width: 100%;">
-                  <div class="mega-col">
-                    <h4><a href="sus.html" style="font-size: 18px !important; color: #111 !important; font-weight: 700 !important;">Sustainability</a></h4>
-                  </div>
-                  <div class="mega-col">
-                    <h4>Planet</h4>
-                    <ul>
-                      <li><a href="env.html">환경전략</a></li>
-                      <li><a href="climate.html">기후변화</a></li>
-                      <li><a href="impact.html">환경영향</a></li>
-                      <li><a href="eco.html">제품환경</a></li>
-                    </ul>
-                  </div>
-                  <div class="mega-col">
-                    <h4>People</h4>
-                    <ul>
-                      <li><a href="employee.html">임직원</a></li>
-                      <li><a href="social.html">사회공헌</a></li>
-                      <li><a href="supply.html">공급망</a></li>
-                    </ul>
-                  </div>
-                  <div class="mega-col">
-                    <h4>Progress</h4>
-                    <ul>
-                      <li><a href="ethics.html">윤리경영</a></li>
-                      <li><a href="compliance.html">준법경영</a></li>
-                    </ul>
-                  </div>
-                  <div class="mega-col">
-                    <h4><a href="library.html" style="font-size: 18px !important; color: #111 !important; font-weight: 700 !important;">Library</a></h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li role="none"><a role="menuitem" href="career.html">인재채용</a></li>
-          <li role="none"><a role="menuitem" href="news.html">뉴스룸</a></li>
-          <li role="none"><a role="menuitem" href="products.html">제품정보</a></li>
-          <li role="none"><a role="menuitem" href="support.html">고객지원</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div id="global-header"></div>
   <main>
-    <div class="page-header" style="background-image: url('images/hero2.png')">
-       <div class="overlay"></div>
-       <div class="container">
-         <h1>제품정보</h1>
-         <div class="breadcrumb">경로: <a href="index.html">홈</a> > <span>제품정보</span></div>
+    <div class="hero-video-container fade-up-element fade-pre-state">
+       <div class="hero-video-bg"></div>
+       <div class="hero-video-text">
+           <h1>GLOBAL B2B ROBOTICS</h1>
+           <p style="font-size: 20px; color: var(--text-base);">당신의 산업 인프라를 혁신할 카테고리별 맞춤형 COBOT 로봇 라인업을 선택하십시오.</p>
        </div>
     </div>
-    <section class="subpage-section">
-      <div class="container">
-        <div class="subpage-content">
-          <h2>제품정보 전용 상세 화면</h2>
-          <p>안녕하십니까, 이곳은 SGC <strong>제품정보</strong> 페이지입니다.</p>
-          <p>상단 메가 메뉴(Mega Menu)의 상세 링크를 클릭하여 <strong>[ 제품정보 ]</strong> 경로로 정상 진입하셨습니다. <br>기업의 투명한 운영과 지속가능한 지구 환경을 위한 SGC의 철학과 기록을 이곳에서 확인하실 수 있습니다.</p>
-        </div>
-      </div>
-    </section>
+    <div class="container fade-up-element fade-pre-state">
+       <div class="route-grid">
+           <a href="products_arm.html" class="route-card">
+               <div class="route-img"><img src="images/sgc_titan.png" alt="Arm"></div>
+               <div class="route-text">
+                   <h3>1. 로봇 암 (Robot Arms)</h3>
+                   <p>압도적인 토크의 산업용 중장비 암부터 인간과 교감하는 정밀 6축 협동로봇 라인업.</p>
+                   <span>자세히 보기 ➜</span>
+               </div>
+           </a>
+           <a href="products_quad.html" class="route-card">
+               <div class="route-img"><img src="images/sgc_quad.png" alt="Quad"></div>
+               <div class="route-text">
+                   <h3>2. 사족보행 로봇 (Quadruped)</h3>
+                   <p>위험 지대 순찰부터 건설 자재 험지 수송까지 막힘없는 전천후 다관절 다리 모빌리티.</p>
+                   <span>자세히 보기 ➜</span>
+               </div>
+           </a>
+           <a href="products_amr.html" class="route-card">
+               <div class="route-img"><img src="images/sgc_amr_sort.png" alt="AMR"></div>
+               <div class="route-text">
+                   <h3>3. 이동형 로봇 (AMR)</h3>
+                   <p>창고 물류를 책임지는 저상 소팅 유닛부터 고객을 모시는 하스피탈리티 인공지능 로봇.</p>
+                   <span>자세히 보기 ➜</span>
+               </div>
+           </a>
+       </div>
+    </div>
   </main>
+  <div id="global-hashtags"></div>
+  <div id="global-footer"></div>
+  <script src="components.js" charset="utf-8"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

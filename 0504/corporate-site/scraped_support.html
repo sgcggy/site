@@ -2,34 +2,71 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>고객지원 - COBOT Corporate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객지원 - Cobot Solutions</title>
+  <meta name="description" content="고객지원 문의 게시판">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="subpage.css">
-  
+  <script src="main.js" defer></script>
   <style>
     .board-table { width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 20px; font-size: 15px; }
-    .board-table th, .board-table td { padding: 18px 15px; border-bottom: 1px solid var(--border-light); color: var(--text-base); }
-    .board-table th { background: rgba(255,255,255,0.05); font-weight: 600; color: #fff; border-top: 2px solid var(--accent-neon); }
-    .board-table tr:hover { background: rgba(57,255,20, 0.05); }
-    .board-table td.actions button { margin-right: 5px; padding: 5px 12px; font-size: 13px; cursor: pointer; border: 1px solid var(--border-light); background: transparent; border-radius: 4px; transition: 0.2s; color: var(--text-light); font-weight: 500;}
-    .board-table td.actions button:hover { border-color: var(--accent-neon); color: #fff; background: var(--accent-neon); color: #000; }
+    .board-table th, .board-table td { padding: 18px 15px; border-bottom: 1px solid var(--border-light); }
+    .board-table th { background: #fafafa; font-weight: 600; color: var(--primary-color); border-top: 2px solid var(--primary-color); }
+    .board-table tr:hover { background: #fdfdfd; }
+    .board-table td.actions button { margin-right: 5px; padding: 5px 12px; font-size: 13px; cursor: pointer; border: 1px solid #ddd; background: #fff; border-radius: 4px; transition: 0.2s; color: #555; font-weight: 500;}
+    .board-table td.actions button:hover { border-color: var(--accent-neon); color: var(--primary-color); }
 
-    .modal-auth { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 200000; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
-    .modal-auth-content { background: var(--secondary-bg); padding: 40px; border-radius: 8px; text-align: center; max-width: 400px; width: 100%; border-top: 4px solid var(--accent-neon); box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--border-light); }
-    .modal-auth-content h4 { font-size: 20px; margin-bottom: 20px; color: #fff; }
-    .modal-auth input { width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid var(--border-light); font-size: 16px; border-radius: 4px; outline: none; background: var(--primary-bg); color: #fff;}
+    .modal-auth { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+    .modal-auth-content { background: #fff; padding: 40px; border-radius: 8px; text-align: center; max-width: 400px; width: 100%; border-top: 4px solid var(--accent-neon); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .modal-auth-content h4 { font-size: 20px; margin-bottom: 20px; color: var(--primary-color); }
+    .modal-auth input { width: 100%; padding: 14px; margin-bottom: 20px; border: 1px solid #ccc; font-size: 16px; border-radius: 4px; outline: none; }
     .modal-auth input:focus { border-color: var(--accent-neon); }
     .modal-auth .btn-group { display: flex; gap: 10px; justify-content: center; }
 
     .form-row { display: flex; gap: 15px; margin-bottom: 15px; }
-    .form-input { flex: 1; padding: 16px; border: 1px solid var(--border-light); font-size: 15px; border-radius: 4px; outline: none; font-family: inherit; background: var(--primary-bg); color: #fff;}
-    .form-input:focus { border-color: var(--accent-neon); box-shadow: 0 0 5px rgba(57,255,20,0.2); }
+    .form-input { flex: 1; padding: 16px; border: 1px solid #ccc; font-size: 15px; border-radius: 4px; outline: none; font-family: inherit;}
+    .form-input:focus { border-color: var(--accent-neon); box-shadow: 0 0 5px rgba(0,251,255,0.2); }
   </style>
 </head>
 <body>
-  <div id="global-header"></div>
-  
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left"></div>
+      <div class="top-bar-right">
+        <a href="#contact" class="top-contact" aria-label="1:1 문의">🎧 B2B 파트너십 문의</a>
+        <div class="lang-selector">
+          <select aria-label="Select Language"><option value="ko">KOR</option><option value="en">ENG</option></select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GNB HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html" style="font-size: 24px; font-weight: 800; color: #111; letter-spacing: -1px;">
+          COBOT <span style="color: #00FBFF; text-shadow: 0 0 5px rgba(0,251,255,0.5);">SOLUTIONS</span>
+        </a>
+      </div>
+      <nav class="gnb" aria-label="Main Navigation">
+        <ul role="menubar">
+          <li role="none"><a role="menuitem" href="intro.html">기업정보</a></li>
+          <li role="none"><a role="menuitem" href="sus.html">지속가능경영</a></li>
+          <li role="none"><a role="menuitem" href="career.html">엔지니어채용</a></li>
+          <li role="none"><a role="menuitem" href="news.html">뉴스룸</a></li>
+          <li role="none"><a role="menuitem" href="products.html">제품정보</a></li>
+          <li role="none"><a role="menuitem" href="support.html">고객지원</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Open Menu">☰</button>
+    </div>
+  </header>
+
   <main>
     <div class="page-header" style="background-image: url('images/cobot_hero.png');">
       <div class="container">
@@ -41,13 +78,13 @@
     </div>
 
     <section class="subpage-section">
-      <div class="container subpage-content fade-up-element fade-pre-state" style="max-width: 1000px; padding: 60px;">
-        <h2 style="color: #fff; margin-bottom: 15px;">고객지원 협업 게시판</h2>
-        <p style="color: var(--text-base); margin-bottom: 40px;">당사의 솔루션 관련 기술 문의, 혹은 B2B 협업 제안을 자유롭게 남겨주세요.<br>
+      <div class="container subpage-content" style="max-width: 1000px; padding: 60px;">
+        <h2>고객지원 협업 게시판</h2>
+        <p>당사의 솔루션 관련 기술 문의, 혹은 B2B 협업 제안을 자유롭게 남겨주세요.<br>
            글 작성 시 설정하신 <strong>비밀번호</strong>를 통해 향후 본인 게시글을 언제든 수정하거나 삭제하실 수 있습니다.</p>
 
         <!-- Board UI -->
-        <div class="board-container">
+        <div class="board-container" style="margin-top: 40px;">
           <table class="board-table">
             <thead>
               <tr>
@@ -63,13 +100,13 @@
             </tbody>
           </table>
           <div style="text-align: right; margin-top: 25px;">
-             <button class="btn btn-primary" id="btn-write-new" style="border-radius:30px; letter-spacing:1px; background: var(--accent-neon); color: #000; font-weight: 700; border: none; padding: 12px 24px; cursor: pointer;">📝 자유롭게 글 쓰기</button>
+             <button class="btn btn-primary" id="btn-write-new" style="border-radius:30px; letter-spacing:1px;">📝 자유롭게 글 쓰기</button>
           </div>
         </div>
 
         <!-- Write / Edit Form UI (Hidden by default) -->
-        <div class="board-form-container" id="board-form-container" style="display: none; margin-top: 60px; padding: 40px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed var(--accent-neon);">
-          <h3 id="form-title" style="font-size: 24px; margin-bottom: 25px; color: #fff;">새 문의글 작성</h3>
+        <div class="board-form-container" id="board-form-container" style="display: none; margin-top: 60px; padding: 40px; background: #fafafa; border-radius: 8px; border: 1px solid #ddd;">
+          <h3 id="form-title" style="font-size: 24px; margin-bottom: 25px; color: var(--primary-color);">새 문의글 작성</h3>
           <form id="post-form">
             <input type="hidden" id="post-id">
             <div class="form-row">
@@ -79,8 +116,8 @@
             <input type="text" class="form-input" id="post-subject" placeholder="문의 사항 혹은 제안 제목을 입력하세요" required style="width: 100%; margin-bottom: 15px;">
             <textarea class="form-input" id="post-content" rows="8" placeholder="상세 내용을 적어주세요. (연락처, 제품군 등을 상세히 적어주시면 빠른 처리에 도움이 됩니다)" required style="width: 100%; margin-bottom: 25px; resize: vertical;"></textarea>
             <div style="display: flex; gap: 15px; justify-content: flex-end;">
-               <button type="button" class="btn btn-secondary" id="btn-cancel" style="padding: 14px 40px; background: transparent; border: 1px solid var(--border-light); color: var(--text-base); border-radius: 8px; cursor: pointer;">닫기</button>
-               <button type="submit" class="btn btn-primary" style="padding: 14px 40px; background: var(--accent-neon); color: #000; border: none; font-weight: 700; border-radius: 8px; cursor: pointer;">저장하기</button>
+               <button type="button" class="btn btn-secondary" id="btn-cancel" style="padding: 14px 40px;">닫기</button>
+               <button type="submit" class="btn btn-primary" style="padding: 14px 40px;">저장하기</button>
             </div>
           </form>
         </div>
@@ -88,32 +125,33 @@
       </div>
     </section>
   </main>
-  
-  <div id="global-hashtags"></div>
-  <div id="global-footer"></div>
 
   <!-- Password Modal for Edit/Delete -->
   <div class="modal-auth" id="auth-modal">
      <div class="modal-auth-content">
         <h4>🔒 권한 확인</h4>
-        <p style="font-size: 14px; color: var(--text-base); margin-bottom: 15px;">글을 작성하실 때 입력하셨던 비밀번호를 입력해주세요.</p>
+        <p style="font-size: 14px; color: #666; margin-bottom: 10px;">글을 작성하실 때 입력하셨던 비밀번호를 입력해주세요.</p>
         <input type="password" id="auth-password" placeholder="비밀번호 입력">
         <div class="btn-group">
-           <button class="btn btn-secondary" id="btn-auth-cancel" style="padding: 10px 20px; background: transparent; border: 1px solid var(--border-light); color: var(--text-base); border-radius: 6px; cursor: pointer;">취소</button>
-           <button class="btn btn-primary" id="btn-auth-confirm" style="padding: 10px 20px; background: var(--accent-neon); color: #000; border: none; font-weight: 700; border-radius: 6px; cursor: pointer;">확인</button>
+           <button class="btn btn-secondary" id="btn-auth-cancel">취소</button>
+           <button class="btn btn-primary" id="btn-auth-confirm">확인</button>
         </div>
      </div>
   </div>
 
-  <script src="components.js" charset="utf-8"></script>
-  <script src="main.js" defer></script>
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p class="copyright">© 2024 Cobot Solutions. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-<!-- Firebase SDK & Board Logic (Scraped from Vercel) -->
+<!-- Firebase SDK & Board Logic -->
 <script type="module">
   // Firebase Modular SDK v10 연동
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc, query, orderBy, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+  // TODO: 사용자가 'firebase_board_guide.md'를 읽고 아래 설정값을 본인 Firebase 설정으로 채워야 합니다.
   const firebaseConfig = {
     apiKey: "AIzaSyD1BzWJR4ZKJ15d1KjmBtpzfnsOpaEWzBE",
     authDomain: "site-9c93b.firebaseapp.com",
@@ -129,7 +167,7 @@
     const app = initializeApp(firebaseConfig);
     db = getFirestore(app);
   } catch (e) {
-    console.warn("Firebase 연동 에러", e);
+    console.warn("Firebase 연동이 아직 완료되지 않았습니다.", e);
   }
 
   // State
@@ -152,7 +190,7 @@
   // Load Data
   async function loadPosts() {
     if (!db || firebaseConfig.apiKey === "YOUR_API_KEY") {
-      boardBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color:red;">[개발자 에러] Firebase 연동이 안 되어 있습니다.</td></tr>';
+      boardBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding: 40px; color:red;">[개발자 에러] Firebase 연동이 안 되어 있습니다. 루트 폴더의 가이드라인(firebase_board_guide.md)을 보고 키를 연동해주세요.</td></tr>';
       return;
     }
     try {
@@ -181,7 +219,7 @@
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td>${count--}</td>
-          <td><strong style="color: #fff;">${data.title}</strong></td>
+          <td><strong>${data.title}</strong></td>
           <td>${data.author}</td>
           <td>${dateStr}</td>
           <td class="actions" style="text-align: center;">
@@ -193,7 +231,7 @@
       });
     } catch(e) {
       console.error(e);
-      boardBody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">데이터를 가져오지 못했습니다.<br>(${e.message})</td></tr>`;
+      boardBody.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">데이터를 가져오지 못했습니다. Firestore 데이터베이스 활성화 및 Rules 설정 확인 바랍니다.<br>(${e.message})</td></tr>`;
     }
   }
 
@@ -252,7 +290,7 @@
   postForm.onsubmit = async (e) => {
     e.preventDefault();
     if(!db || firebaseConfig.apiKey === "YOUR_API_KEY") { 
-        alert("Firebase 연동이 먼저 필요합니다."); 
+        alert("Firebase 연동이 먼저 필요합니다. 루트 디렉토리의 가이드 문서를 참고하세요."); 
         return; 
     }
     

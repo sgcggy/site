@@ -1,134 +1,37 @@
-/* subpage.css - Cobot Subcontracting Theme (Cyberpunk/Minimalist) */
-body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-light); }
+/* subpage.css - Override for Dark Theme */
+body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--primary-bg); }
 main { flex: 1; }
 
-.page-header {
-    padding: 180px 0 110px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: var(--accent-neon);
-    text-align: center;
-    border-bottom: 2px solid var(--primary-color);
-}
-.page-header::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(180deg, rgba(16,16,16,0.95) 0%, rgba(16,16,16,0.6) 100%);
-    z-index: 1;
-}
-.page-header .container {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.page-header h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: -0.05em;
-    color: #fff;
-    text-shadow: 0 0 20px rgba(0,251,255,0.3);
-    animation: fadeDownFade 0.8s ease forwards;
-}
-
-.breadcrumb {
-    display: inline-flex;
-    align-items: center;
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-    font-weight: 500;
-}
-.breadcrumb a {
-    color: #fff;
-    margin: 0 8px;
-    transition: color 0.3s;
-}
-.breadcrumb a:hover {
-    color: var(--accent-neon);
-    text-shadow: 0 0 5px var(--accent-neon);
-}
-.breadcrumb span {
-    color: var(--accent-neon);
-    margin-left: 8px;
-}
-
 .subpage-section {
-    padding: 140px 0 160px;
-    background-image: radial-gradient(circle at 100% 0%, rgba(0,251,255,0.03) 0%, transparent 40%);
+    padding: 80px 0 160px;
+    background-image: radial-gradient(circle at 100% 0%, rgba(57,255,20,0.03) 0%, transparent 40%);
 }
+
 .subpage-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 70px;
-    background: #fff;
+    background: var(--secondary-bg);
     border: 1px solid var(--border-light);
-    border-top: 4px solid var(--primary-color);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-    animation: slideUpFade 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-    position: relative;
+    border-top: 4px solid var(--accent-neon);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     transition: 0.4s;
-}
-.subpage-content:hover {
-    border-top-color: var(--accent-neon);
-    box-shadow: 0 20px 50px rgba(0,251,255,0.1);
+    color: var(--text-base);
 }
 
 .subpage-content h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 45px;
-    position: relative;
-    padding-bottom: 20px;
-    letter-spacing: -1px;
+    color: #fff;
 }
-
-.subpage-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-neon);
-}
-
 .subpage-content p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 35px;
-    font-weight: 400;
+    color: var(--text-base);
 }
-
 .subpage-content strong {
-    color: var(--primary-color);
-    font-weight: 700;
+    color: var(--accent-neon);
 }
 
-/* Animations */
-@keyframes slideUpFade {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
+.breadcrumb a {
+    color: var(--text-base);
 }
-@keyframes fadeDownFade {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
+.breadcrumb a:hover {
+    color: var(--accent-neon);
 }
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .page-header { padding: 120px 0 80px; }
-    .page-header h1 { font-size: 32px; }
-    .subpage-section { padding: 60px 0 80px; }
-    .subpage-content { padding: 40px 20px; }
-    .subpage-content h2 { font-size: 28px; margin-bottom: 30px; }
-    .board-container { overflow-x: auto; width: 100%; border: 1px solid #ddd; }
-    .board-table { min-width: 600px; }
-    .form-row { flex-direction: column; gap: 10px; margin-bottom: 10px;}
-    .contact-form { padding: 40px 20px; }
+.breadcrumb span {
+    color: var(--accent-neon);
 }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SGC 로봇 암 라인업</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="subpage.css">
+  <style>
+    /* 순서 1: 제품 소개 (Hero) */
+    .hero-intro { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; background: var(--secondary-bg); text-align: center; border-bottom: 2px solid var(--accent-neon); margin-top: -100px; }
+    .hero-text { z-index: 2; color: #fff; max-width: 800px; padding: 0 20px;}
+    .hero-text h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; color: var(--accent-neon); }
+    .hero-text p { font-size: 18px; color: var(--text-base); line-height: 1.7;}
+
+    /* 순서 2: 활용가능한 범위 설명 (Scope) */
+    .scope-section { padding: 80px 0; border-bottom: 1px solid var(--border-light); margin-bottom: 80px; }
+    .scope-title { text-align: center; margin-bottom: 50px; }
+    .scope-title h2 { font-size: 34px; color: #fff; margin-bottom: 15px; }
+    .scope-title p { color: var(--text-light); }
+    .scope-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .scope-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-light); padding: 40px; border-radius: 12px; }
+    .scope-card h3 { color: var(--accent-neon); font-size: 22px; margin-bottom: 15px; }
+    .scope-card p { color: var(--text-base); font-size: 15px; line-height: 1.6; }
+
+    /* 순서 3: 제품 (Grid/Cards) */
+    .robot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-bottom: 100px; }
+    .robot-module { background: rgba(0,11,26,0.8); border-radius: 16px; border: 1px solid var(--border-light); display: flex; flex-direction: column; overflow: hidden; }
+    .module-header { padding: 40px; display: flex; flex-direction: column; gap: 20px; flex: 1; }
+    .robot-visual { border-radius: 12px; overflow: hidden; background: #fff; height: 350px; padding:20px; text-align:center;}
+    .robot-visual img { width: 100%; height: 100%; object-fit: contain; }
+    .robot-intro h3 { font-size: 28px; color: #fff; margin-bottom: 10px; }
+    .robot-intro p { font-size: 15px; color: var(--text-base); line-height: 1.6; }
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top:20px;}
+    .spec-table th, .spec-table td { padding: 12px 10px; border-top: 1px solid rgba(255,255,255,0.05); text-align: left; }
+    .spec-table th { color: var(--text-light); width: 45%; }
+    .spec-table td { color: var(--accent-neon); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div id="global-header"></div>
+  <main>
+    <!-- [1. 제품 소개] -->
+    <div class="hero-intro fade-up-element fade-pre-state">
+       <div class="hero-text">
+           <h1>로봇 암 (Robotic Arms)</h1>
+           <p>압도적인 토크와 극정밀 제어력을 결합한 SGC의 산업 및 협동 로봇 팔 라인업. 현대로보틱스의 강력한 모터와 두산로보틱스의 안전 제어 프레임워크를 흡수하여 모든 산업 현장의 니즈를 만족시킵니다.</p>
+       </div>
+    </div>
+
+    <div class="container">
+        <!-- [2. 활용가능한 범위 설명] -->
+        <section class="scope-section fade-up-element fade-pre-state">
+           <div class="scope-title">
+               <h2>활용 가능한 범위 (Applications)</h2>
+               <p>SGC의 로봇 암은 크기와 안전 등급에 따라 무한한 확장성을 품고 있습니다.</p>
+           </div>
+           <div class="scope-grid">
+              <div class="scope-card">
+                  <h3>초정밀 전자 부품 패키징</h3>
+                  <p>수백 개의 미세 보드가 흘러가는 컨베이어 벨트 위에서, 초고속 6축 제어를 통해 반도체나 초소형 PCB 기판 조립 리드타임을 파격적으로 줄여 수율을 극대화합니다.</p>
+              </div>
+              <div class="scope-card">
+                  <h3>중공업 차체 아크 용접</h3>
+                  <p>방수방진(IP67) 설계와 강철 프레임워크로, 뜨거운 쇳물과 용접 스파크가 사방으로 튀는 극악의 환경에서도 24시간 오차 없이 라인을 가동시킵니다.</p>
+              </div>
+              <div class="scope-card">
+                  <h3>인간 공조 F&B 및 랩실</h3>
+                  <p>펜스(방어벽) 없이 인간과 한 공간에서 맞닿아도, 미세 충격을 스스로 인지하고 즉각 강제 정지하는 6D 토크 센서를 통해 서빙, 조리, 의료 기구 조작 등에 안전하게 쓰입니다.</p>
+              </div>
+           </div>
+        </section>
+
+        <!-- [3. 제품] -->
+        <section class="robot-grid fade-up-element fade-pre-state">
+             <!-- 제품 1 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_titan.png" alt="Titan Heavy"></div>
+                     <div class="robot-intro">
+                         <h3>SGC-Titan Heavy</h3>
+                         <p>극한 환경을 견디는 초대형 산업용 로봇 팔. 무거운 쇳물, 배터리 팩, 프레스 등 가혹한 공정에 최적화된 토크를 제공합니다.</p>
+                         <table class="spec-table">
+                             <tr><th>탑재하중 (Payload)</th><td>600 kg</td></tr>
+                             <tr><th>초정밀성 (Repeatability)</th><td>± 0.05 mm</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+             <!-- 제품 2 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_titan_compact.png" alt="Titan Compact"></div>
+                     <div class="robot-intro">
+                         <h3>SGC-Titan Compact</h3>
+                         <p>전자, 부품 조립 픽앤플레이스를 위해 설계된 초고속 6축 소형 암. 엄청난 속도로 공정 사이클 타임을 찢어버립니다.</p>
+                         <table class="spec-table">
+                             <tr><th>탑재하중 (Payload)</th><td>7 kg</td></tr>
+                             <tr><th>초정밀성 (Repeatability)</th><td>± 0.01 mm</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+             <!-- 제품 3 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_collabo.png" alt="Collabo Standard"></div>
+                     <div class="robot-intro">
+                         <h3>SGC-Collabo M</h3>
+                         <p>현시대 가장 완벽한 스마트 협동로봇. 관절 센서를 통해 외부 충격을 인지하며 코딩 없이 다이렉트 티칭이 가능합니다.</p>
+                         <table class="spec-table">
+                             <tr><th>탑재하중 (Payload)</th><td>15 kg</td></tr>
+                             <tr><th>안전보증 (Safety)</th><td>ISO 15066</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+             <!-- 제품 4 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_collabo_h.png" alt="Collabo Heavy"></div>
+                     <div class="robot-intro">
+                         <h3>SGC-Collabo H</h3>
+                         <p>인간 공조와 고하중 처리를 동시에 해결한 협동로봇의 끝판왕. 창고 물류 팔레타이징 시 사람의 근막 질환을 예방합니다.</p>
+                         <table class="spec-table">
+                             <tr><th>탑재하중 (Payload)</th><td>25 kg</td></tr>
+                             <tr><th>안전보증 (Safety)</th><td>ISO 15066</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+        </section>
+    </div>
+  </main>
+  <div id="global-hashtags"></div>
+  <div id="global-footer"></div>
+  <script src="components.js" charset="utf-8"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

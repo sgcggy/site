@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>COBOT 사족보행 로봇 라인업</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="subpage.css">
+  <style>
+    /* 순서 1: 제품 소개 (Hero) */
+    .hero-intro { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; background: var(--secondary-bg); text-align: center; border-bottom: 2px solid var(--accent-neon); margin-top: -100px; }
+    .hero-text { z-index: 2; color: #fff; max-width: 800px; padding: 0 20px;}
+    .hero-text h1 { font-size: 52px; font-weight: 800; margin-bottom: 20px; color: var(--accent-neon); }
+    .hero-text p { font-size: 18px; color: var(--text-base); line-height: 1.7;}
+
+    /* 순서 2: 활용가능한 범위 설명 (Scope) */
+    .scope-section { padding: 80px 0; border-bottom: 1px solid var(--border-light); margin-bottom: 80px; }
+    .scope-title { text-align: center; margin-bottom: 50px; }
+    .scope-title h2 { font-size: 34px; color: #fff; margin-bottom: 15px; }
+    .scope-title p { color: var(--text-light); }
+    .scope-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .scope-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border-light); padding: 40px; border-radius: 12px; }
+    .scope-card h3 { color: var(--accent-neon); font-size: 22px; margin-bottom: 15px; }
+    .scope-card p { color: var(--text-base); font-size: 15px; line-height: 1.6; }
+
+    /* 순서 3: 제품 (Grid/Cards) */
+    .robot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-bottom: 100px; }
+    .robot-module { background: rgba(0,11,26,0.8); border-radius: 16px; border: 1px solid var(--border-light); display: flex; flex-direction: column; overflow: hidden; }
+    .module-header { padding: 40px; display: flex; flex-direction: column; gap: 20px; flex: 1; }
+    .robot-visual { border-radius: 12px; overflow: hidden; background: #fff; height: 350px; padding:20px; text-align:center;}
+    .robot-visual img { width: 100%; height: 100%; object-fit: contain; }
+    .robot-intro h3 { font-size: 28px; color: #fff; margin-bottom: 10px; }
+    .robot-intro p { font-size: 15px; color: var(--text-base); line-height: 1.6; }
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top:20px;}
+    .spec-table th, .spec-table td { padding: 12px 10px; border-top: 1px solid rgba(255,255,255,0.05); text-align: left; }
+    .spec-table th { color: var(--text-light); width: 45%; }
+    .spec-table td { color: var(--accent-neon); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div id="global-header"></div>
+  <main>
+    <!-- [1. 제품 소개] -->
+    <div class="hero-intro fade-up-element fade-pre-state">
+       <div class="hero-text">
+           <h1>사족보행 로봇 (Quadruped Robots)</h1>
+           <p>레인보우로보틱스의 완전한 보행 모터 제어 이데올로기와 COBOT의 강력한 방탄 쉘 프레임이 결합. 험준한 지형이나 인간의 발길이 끊긴 재난 지역에 자유롭게 배치 가능한 고도로 지능적인 전방위 모빌리티 솔루션입니다.</p>
+       </div>
+    </div>
+
+    <div class="container">
+        <!-- [2. 활용가능한 범위 설명] -->
+        <section class="scope-section fade-up-element fade-pre-state">
+           <div class="scope-title">
+               <h2>활용 가능한 범위 (Applications)</h2>
+               <p>기존 바퀴형 로봇(AMR)이 멈춰서는 단차와 험지에서부터 사족보행의 진가가 드러납니다.</p>
+           </div>
+           <div class="scope-grid">
+              <div class="scope-card">
+                  <h3>화학 / 특수 단지 야간 순찰</h3>
+                  <p>V-SLAM 맵핑 알고리즘과 외부 장착된 열화상 레이더를 통해 유독 가스 누출, 고압 전류 이상 스파크, 야간 침입자를 사전에 자율적으로 예지하고 방어합니다.</p>
+              </div>
+              <div class="scope-card">
+                  <h3>재난 / 군용 화물 수송견</h3>
+                  <p>일반 차량 진입이 불가능한 폭파 현장 부근이나 산악 지대에서, 병사나 구조 대원을 대신하여 탄약 및 의료 구호 물품 수십 킬로그램을 등에 싣고 신속 전개합니다.</p>
+              </div>
+              <div class="scope-card">
+                  <h3>건설 / 토목 야지 물류</h3>
+                  <p>평탄화되지 않은 진흙탕 바닥이나 자재가 어지럽게 널브러진 건축 공사장에서 모래 포대나 시멘트 자재를 이송하여 현장 산재 발생률을 제로에 가깝게 만듭니다.</p>
+              </div>
+           </div>
+        </section>
+
+        <!-- [3. 제품] -->
+        <section class="robot-grid fade-up-element fade-pre-state">
+             <!-- 제품 1 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_quad.png" alt="Quad Patrol"></div>
+                     <div class="robot-intro">
+                         <h3>COBOT-Quad Patrol</h3>
+                         <p>초정밀 동적 밸런싱이 접목된 4족 보행 순찰 로봇. 360도 3D LiDAR를 활용해 깜깜한 밤중에도 공장 외곽의 지도를 작성하고 순찰합니다.</p>
+                         <table class="spec-table">
+                             <tr><th>최대 등판능력</th><td>30도 경사, 25cm 단차</td></tr>
+                             <tr><th>최고 주행속도</th><td>3.3 m/s</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+             <!-- 제품 2 -->
+             <article class="robot-module">
+                 <div class="module-header">
+                     <div class="robot-visual"><img src="images/sgc_quad_carrier.png" alt="Quad Carrier"></div>
+                     <div class="robot-intro">
+                         <h3>COBOT-Quad Carrier</h3>
+                         <p>방탄 처리된 특수 장갑 및 두꺼운 관절 모터를 장비한 수송 전용 모델. 물체가 흔들림 없이 평형을 유지하도록 짐칸 짐벌 알고리즘이 내장되어 있습니다.</p>
+                         <table class="spec-table">
+                             <tr><th>등 탑재 하중</th><td>100 kg 무적 수송</td></tr>
+                             <tr><th>발바닥 지지구</th><td>험지 뻘 및 자갈 특화 장비</td></tr>
+                         </table>
+                     </div>
+                 </div>
+             </article>
+        </section>
+    </div>
+  </main>
+  <div id="global-hashtags"></div>
+  <div id="global-footer"></div>
+  <script src="components.js" charset="utf-8"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
