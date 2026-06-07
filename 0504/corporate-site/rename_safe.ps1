@@ -1,20 +1,3 @@
-$ErrorActionPreference = "Stop"
-$targetDir = "c:\Users\4-410\Desktop\0504\corporate-site"
-$extensions = @("*.html", "*.js", "*.css", "*.json", "*.md", "*.txt")
-
-foreach ($ext in $extensions) {
-    $files = Get-ChildItem -Path $targetDir -Filter $ext -File
-    foreach ($file in $files) {
-        try {
-            $content = [System.IO.File]::ReadAllText($file.FullName, [System.Text.Encoding]::UTF8)
-            if ($content -cmatch "SGC") {
-                $content = $content -creplace "SGC", "COBOT"
-                [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.Encoding]::UTF8)
-                Write-Output "Updated $($file.Name)"
-            }
-        } catch {
-            Write-Output "Skipped $($file.Name) due to lock or error"
-        }
-    }
-}
-Write-Output "Done"
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cb3dc69b76b09a3a5765b7e3adbbb61c9ca5ccdb3689d238a1e41c59e9f3162
+size 800
